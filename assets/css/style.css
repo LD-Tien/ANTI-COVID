@@ -1,0 +1,311 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* DÙNG CHUNG */
+/*  */
+/*  */
+.box-sd {
+    box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+}
+
+.text-sd {
+    text-shadow: 0 0 5px #000;
+}
+
+/* .illustration */
+.illustration {
+    margin-bottom: 12px;
+}
+
+.illustration img{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* video-youtube */
+.wrap-vd-ytb {
+    display: flex;
+    width: 100%;
+    margin: 16px auto;
+}
+
+.vd-ytb {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 12px auto;
+    border-radius: 10px;
+    border: 0;
+}
+
+/* note */
+.note {
+    display: inline-block;
+    background-color: #ccc;
+    padding: 16px 32px;
+    border-radius: 10px;
+    margin-top: 16px;
+}
+
+.note h4 {
+    color: rgb(187, 0, 0);
+}
+
+.note p {
+    font-size: 11pt !important;
+}
+
+/* link */
+a {
+    color: #333;
+}
+
+a:hover {
+    color: #999
+}
+
+/* button */
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 11px 16px;
+    /* margin-top: 16px; */
+    border: none;
+    text-align: center;box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    -webkit-appearance: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.btn-green {
+    background-color: #0c0;
+}
+
+.btn-blue {
+    background-color: rgb(87, 154, 255);
+}
+
+.btn-red {
+    background-color: tomato;
+}
+
+.wrap-btn-hotline {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 3;
+}
+
+.btn-hotline {
+    padding: 20px 22px;
+    font-size: 20px;
+    border-radius: 50px;
+    transition: all 1s;
+}
+
+.btn-phone-number {
+    display: none;
+}
+
+.wrap-btn-hotline:hover
+.btn-phone-number {
+    display: inline-block;
+}
+
+/* accordion */
+.accordion {
+    border-radius: 5px;
+}
+
+.accordion-header {
+    background-color: #ccc;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15pt;
+    transition: 0.4s;
+    border-radius: 5px;
+    font-weight: bold;
+    user-select: none;
+}
+  
+.accordion-header:hover {
+    background-color: #333;
+    color: white;
+}
+
+.active {
+    background-color: white;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.accordion-header:after {
+    content: '\002B';
+    display: block;
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin: auto 5px;
+}
+  
+.active:after {
+    content: "\2212";
+}
+
+.accordion-body {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-bottom: 8px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.accordion-body p {
+    font-size: 12pt;
+    margin-bottom: 8px;
+}
+
+/* MAIN CSS */
+/*  */
+
+/* HEADER */
+#header {
+    position: fixed;
+    display: flex;
+    height: 48px;
+    color: white;
+    background-color: rgba(0, 58, 146, 0.9);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#header > div {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+    padding: 0 16px;
+    justify-content: space-between;
+}
+
+#header > div > .logo {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-covid {
+    color: tomato;
+}
+
+/* NAV */
+#nav {
+    margin-right: -16px;
+}
+
+#nav a {
+    margin-right: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+/* BANNER */
+#banner {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background:
+    linear-gradient(45deg,rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0)),
+    url(../img/banner.jpg) top right / cover no-repeat;
+    z-index: 1;
+}
+
+#banner div {
+    width: 1000px;
+    margin: auto;
+    color: #fff;
+    padding:0 300px 0 16px;
+}
+
+#banner div > * {
+    margin: 16px 8px;
+}
+
+
+/* CONTENT */
+#content {
+    background-color: whitesmoke;
+}
+
+.content-section {
+    max-width: 1000px;
+    padding: 36px 16px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.content-section h2 {
+    margin-top: 16px;
+}
+
+.content-section p{
+    margin-top: 8px;
+    font-size: 15pt;
+}
+
+.content-section a {
+    display: inline-block;
+}
+
+.content-section ul {
+    list-style-position: inside;
+}
+
+/* FOOTER */
+#footer {
+    background-color: #333;
+    padding: 32px;
+}
+
+#footer .info {
+    color: whitesmoke;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#footer .contact * {
+    margin: 8px;
+}
+
+#footer a {
+    color: whitesmoke;
+    font-size: 20px;
+}
